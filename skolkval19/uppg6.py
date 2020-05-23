@@ -1,28 +1,26 @@
-def custom_combs(iterable, r):
-    n = len(iterable)
-    indices = list(range(r))
-    yield tuple(iterable[i] for i in indices)
-    while 1:
-        for i in reversed(range(r)):
-            if indices[i] != i + n - r:
-                break
-        else:
-            return
-        indices[i] += 1
-        for j in range(i+1, r):
-            indices[j] = indices[j-1] + 1
+# def custom_combs(iterable, r):
+#     n = len(iterable)
+#     indices = list(range(r))
+#     yield tuple(iterable[i] for i in indices)
+#     while 1:
+#         for i in reversed(range(r)):
+#             if indices[i] != i + n - r:
+#                 break
+#         else:
+#             return
+#         indices[i] += 1
+#         for j in range(i+1, r):
+#             indices[j] = indices[j-1] + 1
         
-        yield tuple(iterable[i] for i in indices)
+#         yield tuple(iterable[i] for i in indices)
 
-def custom_product(*args, repeat=1):
-    pools = [tuple(pool) for pool in args] * repeat
-    result = [[]]
-    for pool in pools:
-        result = [x+[y] for x in result for y in pool]
-    for prod in result:
-        yield tuple(prod)
-
-
+# def custom_product(*args, repeat=1):
+#     pools = [tuple(pool) for pool in args] * repeat
+#     result = [[]]
+#     for pool in pools:
+#         result = [x+[y] for x in result for y in pool]
+#     for prod in result:
+#         yield tuple(prod)
 
 from itertools import combinations, product
 def n_pairs(s):
@@ -48,7 +46,7 @@ flag = ()
 optimal_rad = rad[:]
 for n_swaps in range(1, n//2 + 1):
     for swaps in product(possible_swaps, repeat=n_swaps):
-        if n_swaps is not 1:
+        if n_swaps != 1:
             if flag:
                 if swaps[flag[0]] is flag[1]:
                     continue
