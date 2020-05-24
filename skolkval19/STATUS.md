@@ -9,4 +9,4 @@
 | uppg3.py  | ✅ Done  |
 | uppg4.py  | ✅ Done  |
 | uppg5.py  | ✅ Done  |
-| uppg6.py  | ⚠ Too slow |
+| uppg6.py  | ⚠ Too slow, 1/5 tests passed |
