@@ -8,4 +8,4 @@
 | uppg2.py  | ✅ Done  |
 | uppg3.py  | ✅ Done  |
 | uppg4.py  | ✅ Done  |
-| uppg5.py  | ⚠ In progress |
+| uppg5.py  | ✅ Done  |
